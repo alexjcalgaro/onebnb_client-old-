@@ -1,3 +1,4 @@
+import { PaginationModule } from 'ng2-bootstrap/pagination';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +17,10 @@ import { LoginComponent } from './users/login/login.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { ResultsComponent } from './results/results.component';
+import { SearchComponent } from './shared/search/search.component';
+import { FilterComponent } from './shared/filter/filter.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 
 @NgModule({
@@ -26,7 +31,11 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    UserEditComponent
+    UserEditComponent,
+    ResultsComponent,
+    SearchComponent,
+    FilterComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,9 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     routing,
     AlertModule.forRoot(),
     DropdownModule.forRoot(),
-    CollapseModule
+    CollapseModule,
+    DatepickerModule.forRoot(),
+    PaginationModule.forRoot()
   ],
   providers: [PropertiesService, Angular2TokenService],
   bootstrap: [AppComponent]
