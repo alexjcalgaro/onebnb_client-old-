@@ -16,9 +16,7 @@ export class PropertiesService {
   // Incluimos nosso método de search
   searchProperties(params) {
     let parameters = new URLSearchParams();
-    for (var f in params) {
-      parameters.set(f, params[f]) 
-    }
+    for (var f in params) { parameters.set(f, params[f]) }
 
     return this.http.get(environment.api_base_url + 'search.json', { search: parameters })
       .map(res => res.json());
@@ -30,7 +28,7 @@ export class PropertiesService {
   }
 
   getProperty(id) {
-    return this.http.get(environment.api_base_url + 'properties.json/' + id)
+    return this.http.get(environment.api_base_url + 'properties/' + id)
       .map(res => res.json());
   }
 

@@ -13,6 +13,7 @@ export class PropertyBoxComponent implements OnInit {
   @Input() price: string;
   @Input() stars: string;
   @Input() whish: string;
+  @Input() property_id: string;
 
   constructor() { }
 
